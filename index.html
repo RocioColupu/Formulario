@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Formulario</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/style.css'>
+</head>
+
+<body>
+
+    <div class="container">
+        <form method="post" id="validationForm" name="validationForm">
+            <div class="mb-1">
+                <label for="nombre">NOMBRE:</label> <br>
+                <input type="text" id="txtnombre" name="txtnombre" onkeyup="Validar()" onblur="Validar()" placeholder="Ingrese nombre completo" autofocus>
+                <div id="message" hidden> Introduzca solo letras </div>
+            </div>
+            <div class="mb-1">
+                <label for="email">EMAIL:</label> <br>
+                <input type="email" id="txtemail" name="txtemail" placeholder="example@dominio.com"
+                    onkeypress="return SoloLetras(event);" autofocus required>
+            </div>
+            <div class="mb-1">
+                <label class="form-label"> CODIGO UNICO: </label> <br>
+                <label type="inputRandom" class="form__label label">
+                    <input class="label__input" type="number" name="random" id="inputRandom" readonly>
+                </label>
+            </div><br>
+            <center>
+                <button class="button" disabled name="btn" id="btn" type="submit" onclick="" >
+                    SEND FEEDBACK
+                </button>
+            </center>
+
+        </form>
+    </div>
+    <script type="text/javascript" src='JS/main.js'></script>
+</body>
+
+</html>
